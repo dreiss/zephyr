@@ -79,11 +79,11 @@
 &timers4 {
 	status = "okay";
 
-	pwm4: pwm {
-		status = "okay";
-		pinctrl-0 = <&tim4_ch1_pb6 &tim4_ch2_pb7>;
-		pinctrl-names = "default";
-	};
+	//pwm4: pwm {
+	//	status = "okay";
+	//	pinctrl-0 = <&tim4_ch1_pb6 &tim4_ch2_pb7>;
+	//	pinctrl-names = "default";
+	//};
 };
 
 &usart1 {
@@ -93,8 +93,8 @@
 	current-speed = <115200>;
 };
 
-&i2c1 {
-	pinctrl-0 = <&i2c1_scl_pb8 &i2c1_sda_pb9>;
+arduino_i2c: &i2c1 {
+	pinctrl-0 = <&i2c1_scl_pb6 &i2c1_sda_pb7>;
 	pinctrl-names = "default";
 	status = "okay";
 	clock-frequency = <I2C_BITRATE_FAST>;

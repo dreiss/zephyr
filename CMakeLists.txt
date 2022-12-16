@@ -243,7 +243,7 @@ if(CONFIG_CPLUSPLUS)
   zephyr_compile_options($<$<COMPILE_LANGUAGE:CXX>:${STD_CPP_DIALECT_FLAGS}>)
 endif()
 
-if(NOT CONFIG_EXCEPTIONS)
+if(0)
   # @Intent: Obtain compiler specific flags related to C++ Exceptions
   zephyr_compile_options($<$<COMPILE_LANGUAGE:CXX>:$<TARGET_PROPERTY:compiler-cpp,no_exceptions>>)
 endif()
@@ -1463,7 +1463,7 @@ if(CONFIG_BUILD_OUTPUT_ADJUST_LMA)
     )
 endif()
 
-if(NOT CONFIG_EXCEPTIONS)
+if(0)
   set(eh_frame_section ".eh_frame")
 else()
   set(eh_frame_section "")
